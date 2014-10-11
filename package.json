@@ -2,7 +2,7 @@
   "name": "rump-scripts-test",
   "description": "Rump piece for testing scripts with Karma",
   "author": "Juan Placencia",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "license": "MIT",
   "homepage": "https://github.com/rumps/rump-scripts-test",
   "repository": {
