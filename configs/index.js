@@ -19,10 +19,7 @@ exports.rebuild = function() {
   }, rump.configs.main.paths);
 
   rump.configs.main.test = extend(true, {
-    browsers: ['PhantomJS'],
-    frameworks: [],
-    reporters: ['progress'],
-    karma: {}
+    browsers: ['PhantomJS']
   }, rump.configs.main.test);
 
   exports.karma = karma();
