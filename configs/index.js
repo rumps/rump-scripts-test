@@ -6,16 +6,24 @@ var rump = require('rump');
 var karma = require('./karma');
 
 exports.rebuild = function() {
-  var scripts = path.join(rump.configs.main.paths.source.root,
-                          rump.configs.main.paths.source.scripts);
+  rump.configs.main.globs = extend(true, {
+    build: {
+      tests: rump.configs.main.globs.build.scripts
+    }
+  }, rump.configs.main.globs);
 
   rump.configs.main.paths = extend(true, {
-    test: {
-      scripts: scripts
+    source: {
+      tests: 'tests'
     }
   }, rump.configs.main.paths);
 
-  rump.configs.main.test = extend({karma: {}}, rump.configs.main.test);
+  rump.configs.main.test = extend(true, {
+    browsers: ['PhantomJS'],
+    frameworks: [],
+    reporters: ['progress'],
+    karma: {}
+  }, rump.configs.main.test);
 
   exports.karma = karma();
 };
