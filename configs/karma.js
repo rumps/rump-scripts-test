@@ -1,6 +1,7 @@
 'use strict';
 
 var extend = require('extend');
+var path = require('path');
 var rump = require('rump');
 
 module.exports = function() {
@@ -12,7 +13,7 @@ module.exports = function() {
     frameworks: [],
     files: [tests],
     preprocessors: {},
-    webpack: extend(true, {}, rump.configs.webpack);
+    webpack: extend(true, {}, rump.configs.webpack)
   };
 
   delete karma.webpack.context;
