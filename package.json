@@ -1,0 +1,21 @@
+{
+  "name": "rump-scripts-test",
+  "description": "Rump piece for testing scripts with Karma",
+  "author": "Juan Placencia",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://github.com/rumps/rump-scripts-test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rumps/rump-scripts-test"
+  },
+  "main": "./index.js",
+  "dependencies": {
+    "extend": "^2.0.0"
+  },
+  "peerDependencies": {
+    "rump-scripts": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-webpack": "^1.2.2"
+  }
+}
