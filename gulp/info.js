@@ -5,6 +5,7 @@ var globule = require('globule');
 var gulp = require('gulp');
 var path = require('path');
 var rump = require('rump');
+var pkg = require('../package');
 
 gulp.task('rump:info:scripts:test', function() {
   var glob = path.join(rump.configs.main.paths.source.root,
@@ -19,7 +20,7 @@ gulp.task('rump:info:scripts:test', function() {
   }
 
   console.log();
-  console.log(chalk.magenta('--- Scripts test'));
+  console.log(chalk.magenta('--- Scripts Test', 'v' + pkg.version));
   console.log('Processed tests from', chalk.green(source), 'are run');
   console.log('Affected files:');
   files.forEach(function(file) {
