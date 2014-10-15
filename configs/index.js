@@ -8,7 +8,7 @@ var karma = require('./karma');
 exports.rebuild = function() {
   rump.configs.main.globs = extend(true, {
     build: {
-      tests: rump.configs.main.globs.build.scripts
+      tests: '**/*.js'
     }
   }, rump.configs.main.globs);
 
