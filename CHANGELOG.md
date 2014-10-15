@@ -1,6 +1,6 @@
 # Changelog
 
-#### WIP
+#### 0.2.2
 - Rename tasks so it is more consistent
 
 #### 0.2.1
