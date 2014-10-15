@@ -1,7 +1,6 @@
 'use strict';
 
 var extend = require('extend');
-var path = require('path');
 var rump = require('rump');
 var karma = require('./karma');
 
