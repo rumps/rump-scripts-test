@@ -1,5 +1,8 @@
 # Changelog
 
+#### WIP
+- Rename tasks so it is more consistent
+
 #### 0.2.1
 - Add version information to info task
 - Add common file information to info task

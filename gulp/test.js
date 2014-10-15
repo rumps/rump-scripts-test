@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var karma = require('karma');
 var rump = require('rump');
 
-gulp.task('rump:test:scripts', function(callback) {
+gulp.task('rump:scripts:test', function(callback) {
   var options = extend(true, {}, rump.configs.karma, {
     singleRun: !rump.configs.watch,
     webpackServer: {
@@ -16,5 +16,5 @@ gulp.task('rump:test:scripts', function(callback) {
   karma.server.start(options);
 });
 
-gulp.tasks['rump:test'].dep.push('rump:test:scripts');
-gulp.tasks['rump:test:watch'].dep.push('rump:test:scripts');
+gulp.tasks['rump:test'].dep.push('rump:scripts:test');
+gulp.tasks['rump:test:watch'].dep.push('rump:scripts:test');
