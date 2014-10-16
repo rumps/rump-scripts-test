@@ -27,8 +27,8 @@ The following is appended to the core Rump API:
 This module adds the following tasks:
 - `rump:scripts:test` will process and execute tests with Karma. For more
   information on source path see `rump.configure()` below. This task is also
-  added to the `rump:build` task for single builds as well as the `rump:watch`
-  task for continuous builds.
+  added to the `rump:test` task for a single run test as well as the
+  `rump:test:watch` task for continuous test runs.
 - `rump:info:scripts:test` will display information on what this specific
   module does, specifically the source path as well as what tests would run.
   This task is also added to the `rump:info` task.
