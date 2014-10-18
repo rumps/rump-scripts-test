@@ -5,12 +5,6 @@ var rump = require('rump');
 var karma = require('./karma');
 
 exports.rebuild = function() {
-  rump.configs.main.globs = extend(true, {
-    build: {
-      tests: '**/*.js'
-    }
-  }, rump.configs.main.globs);
-
   rump.configs.main.paths = extend(true, {
     source: {
       tests: 'tests'
