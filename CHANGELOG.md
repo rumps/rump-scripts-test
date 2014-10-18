@@ -1,6 +1,6 @@
 # Changelog
 
-#### WIP
+#### 0.2.3
 - Drop now unused glob (handled by Rump Scripts)
 
 #### 0.2.2
