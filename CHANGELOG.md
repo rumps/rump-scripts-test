@@ -1,6 +1,6 @@
 # Changelog
 
-#### WIP
+#### 0.2.4
 - Detect some Karma plugins when building configuration
 - Add Mocha as a default
 
