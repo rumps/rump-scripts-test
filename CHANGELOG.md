@@ -1,5 +1,9 @@
 # Changelog
 
+#### WIP
+- Detect some Karma plugins when building configuration
+- Add Mocha as a default
+
 #### 0.2.3
 - Drop now unused glob (handled by Rump Scripts)
 

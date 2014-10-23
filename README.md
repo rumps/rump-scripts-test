@@ -8,16 +8,8 @@
 ## About
 Rump Scripts Test is a Rump module for handling and running client-side tests
 on Rump Scripts using [Karma](https://karma-runner.github.io/) with support for
-PhantomJS out of the box. For more information, visit the
+PhantomJS and Mocha out of the box. For more information, visit the
 [Rump repository](https://github.com/rumps/rump).
-
-
-## Notes
-While Webpack and PhantomJS support is included, there are no other options
-included by default for Karma. Make sure to include at least a testing
-framework ([Jasmine](https://github.com/karma-runner/karma-jasmine),
-[Mocha](https://github.com/karma-runner/karma-mocha)/[Chai](https://github.com/princed/karma-chai-plugins),
-etc.) and any other plugins.
 
 
 ## API
@@ -47,14 +39,17 @@ is used, then the path would be `src/tests`)
 This specifies which tests to process and run. By default it processes all JS
 files in the top level directory of the root test path for tests.
 
-#### `options.test.browsers` (`['PhantomJS']`)
-This specifies which browsers to run tests on. By default it runs tests on the
-PhantomJS browser. In fact, this is a convenience for Karma's
-[browsers option](http://karma-runner.github.io/0.10/config/browsers.html).
+#### `options.test.browsers`
+This specifies which browsers to run tests on. In fact, this is a convenience
+for Karma's
+[browsers option](http://karma-runner.github.io/0.12/config/browsers.html).
+See the Karma Plugins section below for information on any browsers already
+set.
 
 #### `options.test.frameworks`
 This specifies which frameworks to load in Karma. In fact, this is a
-convenience for Karma's frameworks option.
+convenience for Karma's frameworks option. See the Karma Plugins section below
+for information on any frameworks already set.
 
 #### `options.test.reporters`
 This specifies which reporters to use in Karma. In fact, this is a convenience
@@ -63,7 +58,7 @@ for Karma's reporters option.
 #### `options.test.karma`
 This specifies any options you want to override in Karma. This is best if you
 want to fully make changes in
-[Karma's configuration](http://karma-runner.github.io/0.10/config/configuration-file.html).
+[Karma's configuration](http://karma-runner.github.io/0.12/config/configuration-file.html).
 
 ### `rump.configs.karma`
 This contains the generated options that are passed to Karma. Not only is this
@@ -77,3 +72,36 @@ module.exports = function(config) {
   config.set(rump.configs.karma);
 };
 ```
+
+## Karma Plugins
+Rump Scripts Test will detect Karma plugins available in the project and append
+items as needed:
+
+- Browsers
+  - [`karma-phantomjs-launcher`](https://github.com/karma-runner/karma-phantomjs-launcher)
+  tests code in the PhantomJS headless browser. If the project has no browsers
+  listed in `package.json`, this browser is used by default.
+  - [`karma-chrome-launcher`](https://github.com/karma-runner/karma-chrome-launcher)
+  tests code in Chrome.
+  - [`karma-firefox-launcher`](https://github.com/karma-runner/karma-firefox-launcher)
+  tests code in Firefox.
+  - [`karma-ie-launcher`](https://github.com/karma-runner/karma-ie-launcher)
+  tests code in Internet Explorer.
+  - [`karma-safari-launcher`](https://github.com/karma-runner/karma-safari-launcher)
+  tests code in Safari.
+  - [`karma-detect-browsers`](https://github.com/litixsoft/karma-detect-browsers)
+  will detect and automatically run on all browsers available in the system.
+
+- Frameworks
+  - [`karma-mocha`](https://github.com/karma-runner/karma-mocha) adds Mocha as
+  the testing framework. If the project has no frameworks listed in
+  `package.json`, this testing framework is used by default. Make sure to
+  include an assertion framework. (you can add one through NPM and use
+  `require` to load one like [Chai](http://chaijs.com/) or
+  [expect.js](https://github.com/LearnBoost/expect.js/))
+  - [`karma-jasmine`](https://github.com/karma-runner/karma-jasmine) adds
+  Jasmine as the testing framework.
+  - [`karma-qunit`](https://github.com/karma-runner/karma-qunit) adds QUnit as
+  the testing framework.
+
+Want support for another plugin? Open an issue/PR.
