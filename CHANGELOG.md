@@ -1,5 +1,8 @@
 # Changelog
 
+### 0.3.0
+- Update to match Rump 0.3.0
+
 #### 0.2.4
 - Detect some Karma plugins when building configuration
 - Add Mocha as a default

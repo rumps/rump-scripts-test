@@ -17,13 +17,14 @@ The following is appended to the core Rump API:
 
 ### `rump.addGulpTasks()`
 This module adds the following tasks:
-- `rump:scripts:test` will process and execute tests with Karma. For more
-  information on source path see `rump.configure()` below. This task is also
-  added to the `rump:test` task for a single run test as well as the
-  `rump:test:watch` task for continuous test runs.
-- `rump:info:scripts:test` will display information on what this specific
-  module does, specifically the source path as well as what tests would run.
-  This task is also added to the `rump:info` task.
+
+- `scripts:test` will process and execute tests with Karma. For more
+information on source path see `rump.configure()` below. This task is also
+added to the `test` task for a single run test as well as the `test:watch`
+task for continuous test runs.
+- `info:scripts:test` will display information on what this specific module
+does, specifically the source path as well as what tests would run. This task
+is also added to the `info` task.
 
 ### `rump.configure(options)`
 Redefine options for Rump and Rump modules to follow. In addition to what
