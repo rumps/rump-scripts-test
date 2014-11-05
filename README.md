@@ -2,7 +2,6 @@
 [![NPM](http://img.shields.io/npm/v/rump-scripts-test.svg?style=flat-square)](https://www.npmjs.org/package/rump-scripts-test)
 ![License](http://img.shields.io/npm/l/rump-scripts-test.svg?style=flat-square)
 [![Dependencies](http://img.shields.io/david/rumps/rump-scripts-test.svg?style=flat-square)](https://david-dm.org/rumps/rump-scripts-test)
-[![Peer Dependencies](http://img.shields.io/david/peer/rumps/rump-scripts-test.svg?style=flat-square)](https://david-dm.org/rumps/rump-scripts-test#info=peerDependencies)
 
 
 ## About
