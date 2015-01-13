@@ -14,7 +14,7 @@ PhantomJS and Mocha out of the box. For more information, visit the
 ## API
 The following is appended to the core Rump API:
 
-### `rump.addGulpTasks()`
+### `rump.addGulpTasks(options)`
 This module adds the following tasks:
 
 - `scripts:test` will process and execute tests with Karma. For more
