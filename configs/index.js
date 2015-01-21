@@ -8,7 +8,7 @@ var plugins = require('./plugins');
 exports.rebuild = function() {
   rump.configs.main.paths = extend(true, {
     source: {
-      tests: 'tests'
+      tests: rump.configs.main.paths.scripts
     }
   }, rump.configs.main.paths);
 
