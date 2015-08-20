@@ -1,23 +1,52 @@
 {
   "name": "rump-scripts-test",
-  "description": "Rump piece for testing scripts with Karma",
+  "version": "0.7.0",
   "author": "Juan Placencia",
-  "version": "0.6.0",
+  "description": "Rump piece for testing scripts with Karma",
   "license": "MIT",
   "homepage": "https://github.com/rumps/rump-scripts-test",
+  "main": "./lib",
   "repository": {
     "type": "git",
     "url": "https://github.com/rumps/rump-scripts-test"
   },
-  "main": "./index.js",
+  "scripts": {
+    "preci": "npm run lint",
+    "ci": "babel-node node_modules/.bin/isparta cover --report json _mocha",
+    "postci": "codecov < coverage/coverage.json",
+    "precompile": "[ -d lib ] && trash lib || true",
+    "compile": "babel src --out-dir lib --source-maps=inline",
+    "coverage": "babel-node node_modules/.bin/isparta cover --report html --report text _mocha -- -R min",
+    "lint": "eslint src test",
+    "pub": "npm run test && npm run compile && npm publish",
+    "pretest": "npm run lint",
+    "test": "mocha"
+  },
   "dependencies": {
-    "chalk": "^0.5.1",
-    "extend": "^2.0.0",
+    "chalk": "^1.1.0",
+    "extend": "^3.0.0",
     "globule": "^0.2.0",
-    "require-all": "^1.0.0",
-    "karma": "^0.12.23",
-    "karma-mocha": "^0.1.9",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "karma-webpack": "^1.2.2"
+    "karma": "^0.13.9",
+    "karma-mocha": "^0.2.0",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^1.9.18",
+    "webpack": "^1.11.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.19",
+    "babel-eslint": "^4.0.5",
+    "codecov.io": "^0.1.5",
+    "eslint": "^1.0.0",
+    "gulp": "^3.9.0",
+    "isparta": "^3.0.3",
+    "mocha": "^2.2.5",
+    "rump": "^0.7.6",
+    "rump-scripts": "^0.7.0",
+    "should": "^7.0.2",
+    "should-sinon": "0.0.3",
+    "sinon": "^1.15.4",
+    "timeout-then": "^1.0.0",
+    "trash": "^2.0.0"
   }
 }

@@ -1,14 +1,34 @@
 # Rump Scripts Test
 [![NPM](http://img.shields.io/npm/v/rump-scripts-test.svg?style=flat-square)](https://www.npmjs.org/package/rump-scripts-test)
 ![License](http://img.shields.io/npm/l/rump-scripts-test.svg?style=flat-square)
-[![Dependencies](http://img.shields.io/david/rumps/rump-scripts-test.svg?style=flat-square)](https://david-dm.org/rumps/rump-scripts-test)
+[![Issues](https://img.shields.io/github/issues/rumps/issues.svg?style=flat-square)](https://github.com/rumps/issues/issues)
+
+
+## Status
+
+### Master
+[![Dependencies](http://img.shields.io/david/rumps/scripts-test.svg?style=flat-square)](https://david-dm.org/rumps/scripts-test)
+[![Dev Dependencies](http://img.shields.io/david/dev/rumps/scripts-test.svg?style=flat-square)](https://david-dm.org/rumps/scripts-test#info=devDependencies)
+<br>
+[![Travis](http://img.shields.io/travis/rumps/scripts-test.svg?style=flat-square&label=travis)](https://travis-ci.org/rumps/scripts-test)
+[![Appveyor](http://img.shields.io/appveyor/ci/jupl/rump-scripts-test.svg?style=flat-square&label=appveyor)](https://ci.appveyor.com/project/jupl/rump-scripts-test)
+[![Codecov](http://img.shields.io/codecov/c/github/rumps/scripts-test.svg?style=flat-square&label=codecov)](https://codecov.io/github/rumps/scripts-test?view=all)
+
+### Develop
+[![Dependencies](http://img.shields.io/david/rumps/scripts-test/develop.svg?style=flat-square)](https://david-dm.org/rumps/scripts-test/develop)
+[![Dev Dependencies](http://img.shields.io/david/dev/rumps/scripts-test/develop.svg?style=flat-square)](https://david-dm.org/rumps/scripts-test/develop#info=devDependencies)
+<br>
+[![Travis](http://img.shields.io/travis/rumps/scripts-test/develop.svg?style=flat-square&label=travis)](https://travis-ci.org/rumps/scripts-test)
+[![Appveyor](http://img.shields.io/appveyor/ci/jupl/rump-scripts-test/develop.svg?style=flat-square&label=appveyor)](https://ci.appveyor.com/project/jupl/rump-scripts-test)
+[![Codecov](http://img.shields.io/codecov/c/github/rumps/scripts-test/develop.svg?style=flat-square&label=codecov)](https://codecov.io/github/rumps/scripts-test?branch=develop&view=all)
 
 
 ## About
 Rump Scripts Test is a Rump module for handling and running client-side tests
-on Rump Scripts using [Karma](https://karma-runner.github.io/) with support for
-PhantomJS and Mocha out of the box. For more information, visit the
-[Rump repository](https://github.com/rumps/rump).
+on [Rump Scripts](https://github.com/rumps/scripts) using
+[Karma](https://karma-runner.github.io/) with support for PhantomJS and Mocha
+out of the box. For more information, visit the
+[core repository](https://github.com/rumps/core).
 
 
 ## API
@@ -70,8 +90,8 @@ For instance, you can create a `karma.conf.js` file with the following:
 ```js
 // Load/initialize Rump modules
 module.exports = function(config) {
-  config.set(rump.configs.karma);
-};
+  config.set(rump.configs.karma)
+}
 ```
 
 ## Karma Plugins
