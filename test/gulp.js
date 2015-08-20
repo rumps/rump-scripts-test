@@ -51,4 +51,11 @@ describe('tasks', function() {
       logs.push(stripColor(args.join(' ')))
     }
   })
+
+  it('can run test', async() => {
+    await new Promise(resolve => {
+      gulp.task('posttest', ['spec:test'], resolve)
+      gulp.start('posttest')
+    })
+  })
 })
