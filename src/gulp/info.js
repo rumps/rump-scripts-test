@@ -27,4 +27,4 @@ task(name('info:scripts:test'), () => {
   console.log()
 })
 
-tasks[name('info:scripts')].dep.push(name('info:scripts:test'))
+tasks[name('info')].dep.push(name('info:scripts:test'))
