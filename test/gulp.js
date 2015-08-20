@@ -37,7 +37,7 @@ describe('tasks', function() {
       '--- Scripts Test v0.7.0',
       `Processed tests from test${sep}fixtures are run`,
       'Affected files:',
-      'lib/adder_test.js',
+      `lib${sep}adder_test.js`,
       '',
     ])
     rump.reconfigure({paths: {source: {scripts: 'nonexistant'}}})
