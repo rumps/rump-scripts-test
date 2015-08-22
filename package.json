@@ -10,6 +10,21 @@
     "type": "git",
     "url": "https://github.com/rumps/rump-scripts-test"
   },
+  "keywords": [
+    "babel",
+    "bower",
+    "coffee-script",
+    "gulp",
+    "karma",
+    "jasmine",
+    "javascript",
+    "mocha",
+    "phantomjs",
+    "qunit",
+    "rump",
+    "rump-module",
+    "webpack"
+  ],
   "scripts": {
     "codecov": "npm run coverage",
     "postcodecov": "codecov < coverage/coverage.json",
