@@ -13,13 +13,12 @@ export default function() {
           browsers: configs.main.test.browsers,
           files: [tests],
           frameworks: configs.main.test.frameworks,
-          preprocessors: {},
+          preprocessors: {[tests]: 'webpack'},
           reporters: configs.main.test.reporters,
           webpack: extend(true, {}, configs.webpack),
         }
   delete karma.webpack.context
   delete karma.webpack.entry
   delete karma.webpack.output
-  karma.preprocessors[tests] = 'webpack'
   return extend(true, karma, configs.main.test.karma)
 }
