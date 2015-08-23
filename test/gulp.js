@@ -34,7 +34,7 @@ describe('tasks', function() {
     console.log = log
     logs.slice(-6).should.eql([
       '',
-      '--- Scripts Test v0.7.0',
+      '--- Scripts Test v0.8.0',
       `Processed tests from test${sep}fixtures are run`,
       'Affected files:',
       `lib${sep}adder_test.js`,

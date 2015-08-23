@@ -31,7 +31,7 @@ let browsers = Object.keys(browserPlugins)
       .map(key => frameworkPlugins[key])
 
 // If user did not specify any browsers, use PhantomJS
-if(!browsers.length && !frameworks.includes('detectBrowsers')) {
+if(!browsers.length && !~frameworks.indexOf('detectBrowsers')) {
   browsers = ['PhantomJS']
 }
 
@@ -43,7 +43,7 @@ if(!frameworks.length) {
 export {browsers, frameworks}
 
 function moduleExists(mod) {
-  if(modules.includes(mod)) {
+  if(~modules.indexOf(mod)) {
     try {
       require.resolve(mod)
       return true
