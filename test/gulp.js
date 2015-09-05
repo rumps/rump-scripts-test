@@ -5,7 +5,7 @@ import {stripColor} from 'chalk'
 import {sep} from 'path'
 import {spy} from 'sinon'
 
-describe('tasks', function() {
+describe('tasks', function describeTasks() {
   this.timeout(0)
 
   afterEach(() => {
@@ -27,8 +27,8 @@ describe('tasks', function() {
   })
 
   it('displays correct information in info task', () => {
-    const logs = [],
-          {log} = console
+    const logs = []
+    const {log} = console
     console.log = newLog
     gulp.start('spec:info')
     console.log = log

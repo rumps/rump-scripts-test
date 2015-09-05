@@ -12,6 +12,6 @@ rump.on('gulp:scripts', (...args) => {
   rump.emit('gulp:scripts:test', ...args)
 })
 
-Object.defineProperty(rump.configs, 'karma', {
+Reflect.defineProperty(rump.configs, 'karma', {
   get: () => rump.configs.main.scripts.karma,
 })

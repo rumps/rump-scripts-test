@@ -1,32 +1,35 @@
 import {resolve} from 'path'
 
-const pkg = require(resolve('package')),
-      {dependencies = {}} = pkg,
-      {devDependencies = {}} = pkg,
-      {optionalDependencies = {}} = pkg,
-      {peerDependencies = {}} = pkg,
-      keys1 = Object.keys(dependencies),
-      keys2 = Object.keys(devDependencies),
-      keys3 = Object.keys(optionalDependencies),
-      keys4 = Object.keys(peerDependencies),
-      modules = [...keys1, ...keys2, ...keys3, ...keys4],
-      browserPlugins = {
-        'karma-chrome-launcher': 'Chrome',
-        'karma-firefox-launcher': 'Firefox',
-        'karma-ie-launcher': 'IE',
-        'karma-phantomjs-launcher': 'PhantomJS',
-        'karma-safari-launcher': 'Safari',
-      },
-      frameworkPlugins = {
-        'karma-detect-browsers': 'detectBrowsers',
-        'karma-jasmine': 'jasmine',
-        'karma-mocha': 'mocha',
-        'karma-qunit': 'qunit',
-      }
+const pkg = require(resolve('package'))
+const {
+  dependencies = {},
+  devDependencies = {},
+  optionalDependencies = {},
+  peerDependencies = {},
+} = pkg
+const modules = [
+  ...Object.keys(dependencies),
+  ...Object.keys(devDependencies),
+  ...Object.keys(optionalDependencies),
+  ...Object.keys(peerDependencies),
+]
+const browserPlugins = {
+  'karma-chrome-launcher': 'Chrome',
+  'karma-firefox-launcher': 'Firefox',
+  'karma-ie-launcher': 'IE',
+  'karma-phantomjs-launcher': 'PhantomJS',
+  'karma-safari-launcher': 'Safari',
+}
+const frameworkPlugins = {
+  'karma-detect-browsers': 'detectBrowsers',
+  'karma-jasmine': 'jasmine',
+  'karma-mocha': 'mocha',
+  'karma-qunit': 'qunit',
+}
 let browsers = Object.keys(browserPlugins)
       .filter(moduleExists)
-      .map(key => browserPlugins[key]),
-    frameworks = Object.keys(frameworkPlugins)
+      .map(key => browserPlugins[key])
+let frameworks = Object.keys(frameworkPlugins)
       .filter(moduleExists)
       .map(key => frameworkPlugins[key])
 
