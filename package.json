@@ -4,12 +4,9 @@
   "author": "Juan Placencia",
   "description": "Rump piece for testing scripts with Karma",
   "license": "MIT",
-  "homepage": "https://github.com/rumps/rump-scripts-test",
+  "homepage": "https://github.com/rumps/scripts-test",
   "main": "./lib",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rumps/rump-scripts-test"
-  },
+  "repository": "rumps/scripts-test",
   "keywords": [
     "babel",
     "bower",
